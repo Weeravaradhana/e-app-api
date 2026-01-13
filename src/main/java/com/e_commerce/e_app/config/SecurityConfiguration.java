@@ -24,7 +24,7 @@ public class SecurityConfiguration {
         http
                 .authorizeHttpRequests(authorize->
                         authorize
-                                .requestMatchers("api/categories").permitAll()
+
                                 .requestMatchers("/api/**").permitAll()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
